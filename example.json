@@ -6,12 +6,7 @@
 		"path": "/mnt/"
 		},
 	"model": {
-		"source": {
-            "file":[
-                "model/model-resnet50-final.h5",
-                "model/keras_model1.h5"
-            ]
-        },
+		"source": "model/model-resnet50-final.h5",         
 		"path": "/mnt/"
 	},
 	"port": [80],
