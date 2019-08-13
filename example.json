@@ -1,0 +1,32 @@
+{
+	"base_image": "tensorflow:10.0",
+	"run": "",
+	"score": {
+		"source": "score/build.py",
+		"path": "/mnt/"
+		},
+	"model": {
+		"source": {
+            "file":[
+                "model/model-resnet50-final.h5",
+                "model/keras_model1.h5"
+            ]
+        },
+		"path": "/mnt/"
+	},
+	"port": [80],
+	"cmd": "python3 /mnt/build.py",
+	"env": {
+		"language": "python3",
+		"source": "env/requirement.txt"
+	},
+	"version_tag": "cpu",
+	"image_name": "cat_dog",
+	"auto_deploy": {
+		"container_name": "cat_dog1",
+		"ports": {
+			"80/tcp": 8890
+		}
+	}
+	
+}
